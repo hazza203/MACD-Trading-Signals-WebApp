@@ -1,0 +1,32 @@
+.container {
+	width: 80%;
+	min-width: 740px;
+	margin: 20px 80px;
+}
+
+.macd-table {
+	min-width: 600px;
+	width: 100%;
+	color: white;
+	font-family: 'Nunito', sans-serif;	
+	border-collapse: collapse;
+}
+
+.macd-table-header {
+	background-color: #2b313a;
+	padding: 0px;
+	border: none;
+}
+
+.macd-table-header th {
+	padding: 5px 10px;
+	white-space: nowrap;
+}
+
+.macd-table-header th:first-child { 
+	border-radius: 15px 0px 0px 15px;
+}
+
+.macd-table-header th:last-child {
+	border-radius: 0px 15px 15px 0px;	
+}

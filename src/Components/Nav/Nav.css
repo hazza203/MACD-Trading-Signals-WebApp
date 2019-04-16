@@ -1,0 +1,9 @@
+.nav-div{
+	background-color: #2b313a;
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	height: 100px;
+	padding: 30px;
+	text-align: left;
+	min-width: 750px;
+}
