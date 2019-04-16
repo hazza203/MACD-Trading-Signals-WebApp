@@ -15,3 +15,5 @@ The state can be:
   * Very below signal (very red)
   
   * Just crossed MACD in last 24 hrs (orange border)
+
+To run locally, download and run npm start in the directory (Install NPM first if not installed)
