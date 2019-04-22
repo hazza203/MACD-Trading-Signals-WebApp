@@ -1,0 +1,111 @@
+.up-cell{
+	background-color: #84FB97;
+}
+
+.dbl-up-cell{
+	background-color: #48D85F;
+}
+
+.down-cell{
+	background-color: #FF8383;
+}
+
+.dbl-down-cell{
+	background-color: #D84848;
+}
+
+.vergence-cell {
+	width: 34px;
+	height: 34px;
+	margin: auto;
+	position: relative;
+	background-image: linear-gradient(to right, #FFDF00, #D4AF37);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 2s ease infinite;
+	-moz-animation: Gradient 2s ease infinite;
+	animation: Gradient 2s ease infinite;
+}
+
+.non-vergence-cell {
+
+}
+
+.cell {
+	margin: auto;
+	width: 34px;
+	height: 34px;
+}
+
+.vergence-cell .cell {
+	margin: auto;
+	width: 30px;
+	height: 30px;
+	top: 0;  
+  bottom: 0;  
+  left: 0;  
+  right: 0; 
+  position: absolute;
+}
+
+.non-vergence-cell .cell{
+	margin: auto;
+	width: 34px;
+	height: 34px;
+}
+
+.td-cell {
+	padding: 3px;
+	width: 34px;
+}
+
+.non-vergence-cell .arrow {
+	display:block;
+  margin:auto;
+	width: 34px;
+	height: 34px;
+	position: absolute;
+}
+
+.vergence-cell .arrow {
+	display:block;
+  margin:auto;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

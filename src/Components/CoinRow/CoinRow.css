@@ -1,0 +1,13 @@
+.coin-row {
+	background-color: #2b313a;
+	padding: 0px;
+	border: none;
+}
+
+.coin-row:last-child td:first-child { 
+	border-radius: 0px 0px 0px 15px;
+}
+
+.coin-row:last-child td:last-child {
+	border-radius: 0px 0px 15px 0px;	
+}

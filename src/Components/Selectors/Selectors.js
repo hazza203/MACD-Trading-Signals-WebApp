@@ -12,12 +12,12 @@ const Selectors	 = ({handleChange, time, sign}) => {
 				<div className='selector-div'>
 					<select className='selector selector1' name='time' value={time} onChange={handleChange}>
 				   {timeArr.map(timeVal => 
-			       <option className='select-options' name={timeVal} value={timeVal}> {timeVal} </option>
+			       <option className='select-options' key={timeVal} name={timeVal} value={timeVal}> {timeVal} </option>
 		        )}
 					</select>	
 					<select className='selector selector2' name='sign' value={sign} onChange={handleChange}>
 						{signArr.map(signVal => 
-							<option name={signVal} value={signVal}> {signVal} </option>
+							<option name={signVal} key={signVal} value={signVal}> {signVal} </option>
 						)}
 					</select>
 			</div>

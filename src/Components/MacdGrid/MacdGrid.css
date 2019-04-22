@@ -1,10 +1,58 @@
 .container {
-	width: 80%;
+	width: 70%;
 	min-width: 740px;
 	margin: 20px 80px;
 }
 
+.table-container {
+	background-image: linear-gradient(to right, #ff00f8, #e70ffb, #cd1bfd, #b124fe, #912cff, #6d4dff, #4561ff, #006fff, #008bff, #00a3ff, #00b8ff, #00cbff);
+	border-radius: 15px 15px;
+	padding: 2px;
+	background-size: 400% 400%;
+	min-width: 746	px;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
 .macd-table {
+	padding: 2px;
 	min-width: 600px;
 	width: 100%;
 	color: white;
@@ -19,14 +67,15 @@
 }
 
 .macd-table-header th {
-	padding: 5px 10px;
+	padding: 5px 0px;
+	font-size: 12px;
 	white-space: nowrap;
 }
 
 .macd-table-header th:first-child { 
-	border-radius: 15px 0px 0px 15px;
+	border-radius: 15px 0px 0px 0px;
 }
 
 .macd-table-header th:last-child {
-	border-radius: 0px 15px 15px 0px;	
+	border-radius: 0px 15px 0px 0px;	
 }
