@@ -3,6 +3,7 @@
 	display: inline-block;
 	margin: 0 calc((100% - 320px) / 8);
 	width: calc(((100% - 320px) / 4) * 2);
+  padding-top: 10.43px;
 	overflow: hidden;
 	white-space: nowrap;
 	left: 50%;

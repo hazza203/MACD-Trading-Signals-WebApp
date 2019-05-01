@@ -10,9 +10,13 @@ class MacdGrid extends React.Component {
 		this.state = {
 			time: '1hr',
 			sign: 'BTC',
-			coins: []
+			coins: [],
+			sortType: '',
+			sortDirection: '',
 		}
 		this.handleChange = this.handleChange.bind(this);
+		this.getFloat = this.getFloat.bind(this)
+		this.sortCoins = this.sortCoins.bind(this)
 	}
 
 	componentDidMount(){
@@ -51,6 +55,60 @@ class MacdGrid extends React.Component {
  		}
 	}
 
+	sortCoins(sortMethod, secondKey=''){
+		let coins = this.state.coins
+		const getFloat = this.getFloat
+
+		if(this.state.sortType === sortMethod){
+			if(this.state.sortDirection === 'up'){
+				coins.sort(function(a, b) {
+					if(getFloat(a, sortMethod, secondKey) > getFloat(b, sortMethod, secondKey)){
+						return 1
+					}
+					if(getFloat(a, sortMethod, secondKey) < getFloat(b, sortMethod, secondKey)){
+						return -1
+					}
+					return 0
+				})
+				this.setState({sortDirection: 'down'})
+			} else {
+				coins.sort(function(a, b) {
+					if(getFloat(a, sortMethod, secondKey) > getFloat(b, sortMethod, secondKey)){
+						return -1
+					}
+					if(getFloat(a, sortMethod, secondKey) < getFloat(b, sortMethod, secondKey)){
+						return 1
+					}
+					return 0
+				})
+				this.setState({sortDirection: 'up'})
+			}
+		} else {
+			coins.sort(function(a, b) {
+				if(getFloat(a, sortMethod, secondKey) > getFloat(b, sortMethod, secondKey)){
+					return -1
+				}
+				if(getFloat(a, sortMethod, secondKey) < getFloat(b, sortMethod, secondKey)){
+					return 1
+				}
+				return 0
+			})
+			this.setState({sortType: sortMethod})
+			this.setState({sortDirection: 'up'})
+		}
+		
+		this.setState({coins: coins})
+	}
+
+	getFloat(obj, key, secondKey){
+		if(secondKey === 'distance'){
+			console.log(obj[key])
+			return parseFloat(obj['periods'][key][secondKey])
+		} else {
+			return parseFloat(obj[key])
+		}
+	}
+
 	render(){
 		const {coins} = this.state
 		
@@ -62,20 +120,20 @@ class MacdGrid extends React.Component {
 						<tbody>
 							<tr className='macd-table-header'>
 								<th>Coin Pair</th>
-								<th>5m</th>
-								<th>15m</th>
-								<th>30m</th>
-								<th>1h</th>
-								<th>2h</th>
-								<th>4hr</th>
-								<th>6hr</th>
-								<th>12hr</th>
-								<th>1d</th>
-								<th>3d</th>
-								<th>1w</th>
-								<th>Price</th>
-								<th>24hr Change</th>
-								<th>Vol Change</th>
+								<th onClick={() => this.sortCoins('m5', 'distance')}>5m</th>
+								<th onClick={() => this.sortCoins('m15', 'distance')}>15m</th>
+								<th onClick={() => this.sortCoins('m30', 'distance')}>30m</th>
+								<th onClick={() => this.sortCoins('h1', 'distance')}>1h</th>
+								<th onClick={() => this.sortCoins('h2', 'distance')}>2h</th>
+								<th onClick={() => this.sortCoins('h4', 'distance')}>4hr</th>
+								<th onClick={() => this.sortCoins('h6', 'distance')}>6hr</th>
+								<th onClick={() => this.sortCoins('h12', 'distance')}>12hr</th>
+								<th onClick={() => this.sortCoins('d1', 'distance')}>1d</th>	
+								<th onClick={() => this.sortCoins('d3', 'distance')}>3d</th>
+								<th onClick={() => this.sortCoins('w1', 'distance')}>1w</th>
+								<th onClick={() => this.sortCoins('price')}>Price</th>
+								<th onClick={() => this.sortCoins('change')}>24hr Change</th>
+								<th onClick={() => this.sortCoins('volume')}>Vol Change</th>
 							</tr>
 							{ 
 								typeof coins != 'undefined' ?
