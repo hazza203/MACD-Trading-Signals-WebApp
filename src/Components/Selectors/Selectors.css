@@ -32,6 +32,16 @@
 
 }
 
+.checkbox {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+  height: 30px;
+  color: var(--text);
+  float: right;
+  padding-top: 8px;
+  margin-right: 20px;
+}
+
 .selector-div {
 	display: inline;
 }

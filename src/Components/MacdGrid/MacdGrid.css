@@ -71,6 +71,7 @@
 	padding: 5px 0px;
 	font-size: 12px;
 	white-space: nowrap;
+	cursor: pointer;
 }
 
 .macd-table-header th:first-child { 

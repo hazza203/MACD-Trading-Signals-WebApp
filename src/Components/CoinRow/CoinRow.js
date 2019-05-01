@@ -3,7 +3,7 @@ import CoinCell from './CoinCell/CoinCell.js'
 import './CoinRow.css'
 
 
-const CoinRow = ({coin}) => {
+const CoinRow = ({coin, showArrows}) => {
 
 	const tryRequire = (coin) => {
 	  try {
@@ -44,7 +44,7 @@ const CoinRow = ({coin}) => {
 			</td>
 			{
 				Object.keys(coin.periods).map(key =>
-						<CoinCell	key={`${coin.symbol}${key}`} period={coin.periods[key]} />
+						<CoinCell	key={`${coin.symbol}${key}`} period={coin.periods[key]} showArrows={showArrows}/>
 					)
 			}
 			<td>{coin.price}</td>

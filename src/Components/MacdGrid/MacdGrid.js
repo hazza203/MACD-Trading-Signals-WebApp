@@ -13,8 +13,10 @@ class MacdGrid extends React.Component {
 			coins: [],
 			sortType: '',
 			sortDirection: '',
+			showArrows: false
 		}
 		this.handleChange = this.handleChange.bind(this);
+		this.handleCheckChange = this.handleCheckChange.bind(this)
 		this.getFloat = this.getFloat.bind(this)
 		this.sortCoins = this.sortCoins.bind(this)
 	}
@@ -53,6 +55,14 @@ class MacdGrid extends React.Component {
 			default:
 				break
  		}
+	}
+
+	handleCheckChange(event) {
+		if(this.state.showArrows === true){
+			this.setState({showArrows: false})
+		} else {
+			this.setState({showArrows: true})
+		}
 	}
 
 	sortCoins(sortMethod, secondKey=''){
@@ -110,11 +120,11 @@ class MacdGrid extends React.Component {
 	}
 
 	render(){
-		const {coins} = this.state
+		const {coins, showArrows} = this.state
 		
 		return (
 			<div className='container'>
-				<Selectors handleChange={this.handleChange} time={this.state.time} sign={this.state.sign}/>
+				<Selectors handleChange={this.handleChange} handleCheckChange={this.handleCheckChange} time={this.state.time} sign={this.state.sign}/>
 				<div className='table-container'>
 					<table className='macd-table'>
 						<tbody>
@@ -138,7 +148,7 @@ class MacdGrid extends React.Component {
 							{ 
 								typeof coins != 'undefined' ?
 									coins.map((coin) => 
-										<CoinRow coin={coin} />
+										<CoinRow coin={coin} showArrows={showArrows}/>
 									) 
 									: null
 							}

@@ -6,20 +6,20 @@ import dblUpArrow from './dbl-up-arrow.png'
 import dblDownArrow from './dbl-down-arrow.png'
 import horizontalLine from './horizontal-line.png'
 
-const CoinCell = (period) => {
+const CoinCell = ({period, showArrows}) => {
 
 	let className = ''
 	let arrow = horizontalLine
 
 	const cellClass = () => {
-		if(period.period.distance > 0){
+		if(period.distance > 0){
 			className = 'up-cell'
-			if(period.period.distance > 50){
+			if(period.distance > 50){
 				className = 'dbl-up-cell'
 			}
-		} else if(period.period.distance < 0){
+		} else if(period.distance < 0){
 			className = 'down-cell'
-			if(period.period.distance < -50){
+			if(period.distance < -50){
 				className = 'dbl-down-cell'
 			}
 		}
@@ -28,14 +28,14 @@ const CoinCell = (period) => {
 	}
 
 	const arrowStatus = () => {
-		if(period.period.pctMacdChange > 0){
+		if(period.pctMacdChange > 0){
 			arrow = upArrow
-			if(period.period.pctMacdChange > 50){
+			if(period.pctMacdChange > 50){
 				arrow = dblUpArrow
 			}
-		} else if(period.period.pctMacdChange < 0){
+		} else if(period.pctMacdChange < 0){
 			arrow = downArrow
-			if(period.period.pctMacdChange < -50){
+			if(period.pctMacdChange < -50){
 				arrow = dblDownArrow
 			}
 		}
@@ -44,7 +44,7 @@ const CoinCell = (period) => {
 	}
 
 	const hasVergence = () => {
-		if(period.period.vergence === true)
+		if(period.vergence === true)
 			return 'vergence-cell'
 		else {
 			return 'non-vergence-cell'
@@ -56,7 +56,11 @@ const CoinCell = (period) => {
 		<td className='td-cell'>
 			<div className={`${hasVergence()}`}>
 				<div className={`cell ${cellClass()}`}>
-					<img className='arrow' alt='macd direction arrow' src={arrowStatus()}/>
+					{	
+						showArrows === true ?
+							<img className='arrow' alt='macd direction arrow' src={arrowStatus()}/>
+						: null
+					}
 				</div>
 			</div>
 		</td>
