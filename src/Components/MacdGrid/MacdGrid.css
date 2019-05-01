@@ -2,14 +2,15 @@
 	width: 70%;
 	min-width: 740px;
 	margin: 20px 80px;
+	margin-top: 20px;
 }
 
 .table-container {
-	background-image: linear-gradient(to right, #ff00f8, #e70ffb, #cd1bfd, #b124fe, #912cff, #6d4dff, #4561ff, #006fff, #008bff, #00a3ff, #00b8ff, #00cbff);
+	background-image: var(--border-gradient);
 	border-radius: 15px 15px;
 	padding: 2px;
 	background-size: 400% 400%;
-	min-width: 746	px;
+	min-width: 810px;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
@@ -55,13 +56,13 @@
 	padding: 2px;
 	min-width: 600px;
 	width: 100%;
-	color: white;
+	color: var(--text);
 	font-family: 'Nunito', sans-serif;	
 	border-collapse: collapse;
 }
 
 .macd-table-header {
-	background-color: #2b313a;
+	background-color: var(--secondary-background);
 	padding: 0px;
 	border: none;
 }

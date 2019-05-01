@@ -9,7 +9,7 @@
 
 .grid-heading{
 	display: inline;
-	color: white;
+	color: var(--text);
 	font-family: 'Nunito', sans-serif;
 	font-weight: 600;
 	font-size: 20px;
@@ -23,10 +23,10 @@
   height: 34px;
   overflow: hidden;
   padding:5px 0px 5px 10px;
-  background-color: #2b313a;
+  background-color: var(--secondary-background);
   border: none;
   border-radius: 2px;
-  color: white;
+  color: var(--text);
   margin-right: 20px;
   float: right;
 

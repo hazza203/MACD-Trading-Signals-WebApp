@@ -1,0 +1,45 @@
+.scrolling-price-container {
+	text-align: center;
+	display: inline-block;
+	margin: 0 calc((100% - 320px) / 8);
+	width: calc(((100% - 320px) / 4) * 2);
+	overflow: hidden;
+	white-space: nowrap;
+	left: 50%;
+}
+
+.scroller {
+	position: relative;
+	display: inline-block;
+	left: 30px;
+	-webkit-animation: Scroll 30s linear infinite;
+  -moz-animation: Scroll 30s linear infinite;
+  animation: Scroll 30s linear infinite;
+}
+
+@-webkit-keyframes Scroll {
+  0% {
+    left: 30px
+  }
+  100% {
+    left: -1070px
+  }
+}
+
+@-moz-keyframes Scroll {
+  0% {
+    left: 30px
+  }
+  100% {
+    left: -1070px
+  }
+}
+
+@keyframes Scroll {
+  0% {
+    left: 30px
+  }
+  100% {
+    left: -1070px
+  }
+}

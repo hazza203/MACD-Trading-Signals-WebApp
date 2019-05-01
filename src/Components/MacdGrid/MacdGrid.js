@@ -13,7 +13,6 @@ class MacdGrid extends React.Component {
 			coins: []
 		}
 		this.handleChange = this.handleChange.bind(this);
-		this.loadData = this.loadData.bind(this)
 	}
 
 	componentDidMount(){
@@ -21,14 +20,9 @@ class MacdGrid extends React.Component {
 		.then(response => response.json())
 		.then(data => {
 			this.setState({coins: data})
-			console.log('STATE CHANGED')
-			console.log(this.state.coins[0].symbol)
 		})
 	}
 
-	loadData() {
-		
-	}
 
 	handleChange(event) {
  		switch(event.target.name){
@@ -42,8 +36,6 @@ class MacdGrid extends React.Component {
 					.then(response => response.json())
 					.then(data => {
 						this.setState({coins: data})
-						console.log('STATE CHANGED')
-						console.log(this.state.coins[0].symbol)
 					})
 				} else {
 					this.setState({sign: event.target.value})

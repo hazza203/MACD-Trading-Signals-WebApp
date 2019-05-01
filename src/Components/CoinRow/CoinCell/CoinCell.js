@@ -27,15 +27,15 @@ const CoinCell = (period) => {
 		return className
 	}
 
-	const imgSrc = () => {
-		if(period.period.pctSignalChange > 0){
+	const arrowStatus = () => {
+		if(period.period.pctMacdChange > 0){
 			arrow = upArrow
-			if(period.period.pctSignalChange > 50){
+			if(period.period.pctMacdChange > 50){
 				arrow = dblUpArrow
 			}
-		} else if(period.period.pctSignalChange < 0){
+		} else if(period.period.pctMacdChange < 0){
 			arrow = downArrow
-			if(period.period.pctSignalChange < -50){
+			if(period.period.pctMacdChange < -50){
 				arrow = dblDownArrow
 			}
 		}
@@ -56,7 +56,7 @@ const CoinCell = (period) => {
 		<td className='td-cell'>
 			<div className={`${hasVergence()}`}>
 				<div className={`cell ${cellClass()}`}>
-					<img className='arrow' src={imgSrc()}/>
+					<img className='arrow' alt='macd direction arrow' src={arrowStatus()}/>
 				</div>
 			</div>
 		</td>

@@ -1,0 +1,35 @@
+.header {
+  background-image: var(--border-gradient);
+  padding-bottom: 1px;
+  background-size: 400% 400%;
+  min-width: 840px;
+  width: 100%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  z-index: 9;
+} 
+
+.header-div{
+  display: block;
+  background-color: var(--secondary-background);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  min-width: 780px;
+  height:100%;
+  padding: 10px 0px 0px 20px;
+}
+
+.header-links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text);
+  margin: 10px;
+}
+
+.header-links {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}

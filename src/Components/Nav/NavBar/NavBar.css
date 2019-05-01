@@ -1,0 +1,90 @@
+.bar-nav-div{
+  background-color: var(--secondary-background);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 780px;
+  height:100%;
+  margin: auto;
+  padding: 10px 0px 0px 20px;
+  
+}
+
+.bar-main-heading {
+  display: flex;
+  width: calc((100% - 320px) / 4);
+  justify-content: flex-start;  
+  white-space: nowrap;
+}
+
+.bar-links{
+  padding-top: 17.43px;
+  display: flex;
+  width: 320px;
+  justify-content: flex-end;
+}
+
+.links-wrapper{
+  display: inline-block;
+}
+
+.bar-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 20px;
+  vertical-align: top;
+  justify-content: flex-end;
+
+}
+
+.bar-nav-container {
+  padding-bottom: 1px;
+  background-size: 400% 400%;
+  min-width: 840px;
+  width: 100%;
+  margin-bottom: 200px;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  position: fixed;
+  z-index: 9;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}

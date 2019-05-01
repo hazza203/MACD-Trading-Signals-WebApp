@@ -19,11 +19,11 @@
 	height: 34px;
 	margin: auto;
 	position: relative;
-	background-image: linear-gradient(to right, #FFDF00, #D4AF37);
+	background-image: linear-gradient(to right, #978900, #FFE700);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 2s ease infinite;
-	-moz-animation: Gradient 2s ease infinite;
-	animation: Gradient 2s ease infinite;
+	-webkit-animation: Gradient 1s ease infinite;
+	-moz-animation: Gradient 1s ease infinite;
+	animation: Gradient 1s ease infinite;
 }
 
 .non-vergence-cell {

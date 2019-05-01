@@ -1,3 +1,24 @@
+html{
+  --text: white;
+  --background: #343b47;
+  --secondary-background: #2b313a;
+  --border-gradient: linear-gradient(to right, #ff00f8, #e70ffb, #cd1bfd, #b124fe, #912cff, #6d4dff, #4561ff, #006fff, #008bff, #00a3ff, #00b8ff, #00cbff);
+}
+
+html[data-theme="dark"]{
+  --text: white;
+  --background: #343b47;
+  --secondary-background: #2b313a;
+  --border-gradient: linear-gradient(to right, #ff00f8, #e70ffb, #cd1bfd, #b124fe, #912cff, #6d4dff, #4561ff, #006fff, #008bff, #00a3ff, #00b8ff, #00cbff);
+}
+
+html[data-theme="light"] {
+  --text: #2b313a;
+  --background: #F9F9F9;
+  --secondary-background: #E6EBEF;
+  --border-gradient: linear-gradient(to right, #00fff0, #00ffdd, #00ffc6, #00ffa9, #33ff89, #63ff79, #83ff6a, #9eff5b, #bbff64, #d3ff6f, #e7ff7d, #f8ff8c);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +27,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #343b47;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 code {

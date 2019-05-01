@@ -1,5 +1,5 @@
 .coin-row {
-	background-color: #2b313a;
+	background-color: var(--secondary-background);
 	padding: 0px;
 	border: none;
 }
@@ -11,3 +11,28 @@
 .coin-row:last-child td:last-child {
 	border-radius: 0px 0px 15px 0px;	
 }
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo{	
+	padding-left: 10px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+}
+
+.symbol-td {
+	text-align: left;
+	min-width: 150px;
+}
+
+.symbol-name {
+	float: right;
+	padding-top: 8px;
+	padding-right: 10px;
+	margin-left: -25px;
+}
+
