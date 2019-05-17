@@ -22,7 +22,7 @@ const Selectors	 = ({handleChange, handleCheckChange, time, sign}) => {
 						)}
 					</select>
 					<input className='checkbox' onChange={e => handleCheckChange(e)} type="checkbox" name="arrows" />
-					<label className='checkbox' for="arrows">Display Arrows</label>
+					<label className='checkbox' for="arrows">Display Trend Arrows</label>
 			</div>
 		</div>
 	)

@@ -1,4 +1,5 @@
 import React from 'react'
+import Numeral from 'numeral'
 import CoinCell from './CoinCell/CoinCell.js'
 import './CoinRow.css'
 
@@ -49,7 +50,7 @@ const CoinRow = ({coin, showArrows}) => {
 			}
 			<td>{coin.price}</td>
 			<td>{coin.change}%</td>
-			<td>0</td>	
+			<td>{Numeral(coin.volume).format('0,0.00')}</td>	
 		</tr>
 	)
 }

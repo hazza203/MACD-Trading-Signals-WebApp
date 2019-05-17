@@ -2,16 +2,21 @@
   "name": "trading-macd",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hazza203.github.io/MACD-Trading-Signals-WebApp/"
   "dependencies": {
+    "gh-pages": "^2.0.1",
+    "numeral": "^2.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,16 +1,17 @@
 .container {
-	width: 70%;
 	min-width: 740px;
-	margin: 20px 80px;
+	margin: 0 auto;
 	margin-top: 20px;
 }
 
 .table-container {
+	margin: 0 auto;
 	background-image: var(--border-gradient);
 	border-radius: 15px 15px;
 	padding: 2px;
 	background-size: 400% 400%;
-	min-width: 810px;
+	min-width: 813px;
+	max-width: 1000px;
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;

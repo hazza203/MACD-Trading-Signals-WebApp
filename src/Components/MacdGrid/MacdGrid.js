@@ -143,7 +143,7 @@ class MacdGrid extends React.Component {
 								<th onClick={() => this.sortCoins('w1', 'distance')}>1w</th>
 								<th onClick={() => this.sortCoins('price')}>Price</th>
 								<th onClick={() => this.sortCoins('change')}>24hr Change</th>
-								<th onClick={() => this.sortCoins('volume')}>Vol Change</th>
+								<th onClick={() => this.sortCoins('volume')}>Volume</th>
 							</tr>
 							{ 
 								typeof coins != 'undefined' ?
