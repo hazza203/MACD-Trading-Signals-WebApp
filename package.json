@@ -2,7 +2,7 @@
   "name": "trading-macd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hazza203.github.io/MACD-Trading-Signals-WebApp/"
+  "homepage": "https://hazza203.github.io/MACD-Trading-Signals-WebApp/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "numeral": "^2.0.6",
