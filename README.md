@@ -1,5 +1,7 @@
 ### MACD Trading Signals Webapp
 
+Server code can be found [here](https://github.com/hazza203/MACD-Trading-Signals-Server)
+
 MACD (Moving Average Convergence Divergence)
 
 This application displays the current state of the MACD trading signal for all coins on Binance. It gives the user a quick glance at this particular signal saving a lot of time checking many charts. If something looks good, then a user can investigate more and spend more time looking at a particular chart. 
